@@ -60,6 +60,7 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Controllers
             try
             {
                 var createdCompany = await _companyRepo.CreateCompany(company);
+                // return Ok ( createdCompany);
                 return CreatedAtRoute("CompanyById", new { id = createdCompany.Id }, createdCompany);
             }
             catch (Exception ex)
@@ -131,7 +132,7 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Controllers
         {
             try
             {
-                var company = await _companyRepo.GetCompanyEmployeeMultipleResults(id);
+                var company = await _companyRepo.ByCompanyIdGetAllEmployeeEngagged(id);
                 if (company == null)
                     return NotFound();
                 return Ok(company);

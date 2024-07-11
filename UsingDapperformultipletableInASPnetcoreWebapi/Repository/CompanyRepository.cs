@@ -116,7 +116,7 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Repository
         }
 
         //Executing Multiple SQL Statements with a Single Query
-        public async Task<Company> GetCompanyEmployeeMultipleResults(int id)
+        public async Task<Company> ByCompanyIdGetAllEmployeeEngagged(int id)
         {
             var query = "SELECT * FROM Companies WHERE Id = @Id;" +
               "SELECT * FROM Employees WHERE CompanyId = @Id";
@@ -157,6 +157,7 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Repository
                 return companies.Distinct().ToList();
             }
         }
+
         
     }
 }

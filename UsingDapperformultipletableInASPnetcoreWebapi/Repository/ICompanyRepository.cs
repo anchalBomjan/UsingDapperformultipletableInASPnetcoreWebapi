@@ -15,7 +15,7 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Repository
 
         public Task<Company> GetCompanyByEmployeeId(int id);
 
-        public Task<Company> GetCompanyEmployeeMultipleResults(int id);
+        public Task<Company> ByCompanyIdGetAllEmployeeEngagged(int id);
 
 
 
