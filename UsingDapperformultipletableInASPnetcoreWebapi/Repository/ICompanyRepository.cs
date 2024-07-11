@@ -4,7 +4,7 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Repository
 {
     public interface ICompanyRepository
     {
-        public Task<IEnumerable<Company>> GetCompanies();
+        public Task<IEnumerable<CompanyDto>> GetCompanies();
 
         public Task<Company> GetCompany(int id);
         public Task<Company> CreateCompany(CompanyForCreationDto company);
@@ -14,5 +14,11 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Repository
         public Task DeleteCompany(int id);
 
         public Task<Company> GetCompanyByEmployeeId(int id);
+
+        public Task<Company> GetCompanyEmployeeMultipleResults(int id);
+
+
+
+        public Task<List<Company>> GetCompaniesEmployeesMultipleMapping();
     }
 }
