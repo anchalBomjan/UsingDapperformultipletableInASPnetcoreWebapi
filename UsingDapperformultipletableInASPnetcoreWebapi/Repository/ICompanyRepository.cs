@@ -7,5 +7,6 @@ namespace UsingDapperformultipletableInASPnetcoreWebapi.Repository
         public Task<IEnumerable<Company>> GetCompanies();
 
         public Task<Company> GetCompany(int id);
+        public Task CreateCompany(CompanyForCreationDto company);
     }
 }
